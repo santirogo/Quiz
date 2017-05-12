@@ -1,4 +1,5 @@
-package edu.co.sergio.mundo.dao;
+package dao;
+import edu.co.sergio.mundo.dao.*;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.sql.*;

@@ -1,4 +1,3 @@
-import edu.co.sergio.mundo.dao.CreateDataBase;
 import java.io.File;
 import org.glassfish.embeddable.CommandResult;
 import org.glassfish.embeddable.CommandRunner;
@@ -9,8 +8,9 @@ import org.glassfish.embeddable.GlassFishRuntime;
 import org.glassfish.embeddable.archive.ScatteredArchive;
 
 public class MainGlassfish {
-
+    
 	public static void main(String[] args) throws Exception {
+            
 	   String webappDirLocation = "src/main/webapp/";
 
 	// Look for that variable and default to 8080 if it isn't there.

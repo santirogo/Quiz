@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ page import="edu.co.sergio.mundo.vo.*"%>
 <%@ page import="java.util.List" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
     "http://www.w3.org/TR/html4/loose.dtd">
@@ -14,31 +13,27 @@ body {
  
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Crunchify JSP Servlet Example</title>
+<title>Ingresar Obra</title>
 </head>
 <body>
+    <%if (request.getAttribute("mensaje")=="ok") {%>
+        <script>alert("Se agregó correctamente");</script>
+    <%}else{%>
+        <script>alert("Se agregó correctamente");</script>
+    <%}%>
     <div align="center" style="margin-top: 50px;">
-        <form action="CrunchifyServlet">
-           Id Depto:  <input type="text" name="id" size="20px"> <br>
-           Nombre Depto:  <input type="text" name="nombre" size="20px"> <br><br>
+        <form action="ServletQuiz">
+           Nombre: <input type="text" name="nombre"> <br>
+           Decripción: <input type="text" name="descripcion"> <br>
+           Estilo: <input type="text" name="estilo"> <br>
+           Valor: <input type="text" name="valor"> <br>
+           Usuario: <input type="text" name="usuario"> <br>
         <input type="submit" value="submit">
         </form>
      </div>
- 
-    <%
-       if( request.getAttribute("departamentos")!=null){
-          List<Departamento> departamentos  = (List<Departamento>)request.getAttribute("departamentos");
-           for (Departamento departamento : departamentos) {
-         %>      
-         <h1> <%=departamento.getNom_departamento()%> </h1><br/> 
-         <%      
-          }
-       }
-      
     
-    %>
-    <img src="ChartServlet" /><br/>
-    Descargar Excel <a href="HSSFCreate">Descargar</a> 
+    <img src="ChartServlet" />
+    <!--Descargar Excel <a href="HSSFCreate">Descargar</a> -->
     
 </body>
 </html>
