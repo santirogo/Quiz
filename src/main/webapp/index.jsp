@@ -22,7 +22,7 @@ body {
         <script>alert("Se agregó correctamente");</script>
     <%}%>
     <div align="center" style="margin-top: 50px;">
-        <form action="ServletQuiz">
+        <form action="IndexServlet">
            Nombre: <input type="text" name="nombre"> <br>
            Decripción: <input type="text" name="descripcion"> <br>
            Estilo: <input type="text" name="estilo"> <br>
